@@ -1,0 +1,36 @@
+.invert .content-container{
+	  background-color: #336666;
+}
+.invert .project h1{
+	color:white;
+}
+.invert .project h2{
+	color:#d6e0e0;
+}
+.invert .project .tag{
+	color:white;
+	border:1px solid #ffffff;
+	opacity: 0.5;
+}
+.invert .project .tag:hover{
+	color:black;
+	background-color: white;
+	opacity: 1;
+	border: 1px solid white;
+}
+.invert .detail a{
+	color:white;
+}
+.invert #iwant{
+	color:white;
+	border:solid 1px white;
+}
+.invert #iwant:hover{
+	color:black;
+	background-color: white;
+}
+.inverted .phone-wrapper {
+
+  background-image: url('../img/phone.png');
+
+}

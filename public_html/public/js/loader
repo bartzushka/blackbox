@@ -1,0 +1,92 @@
+var loaded = 0;
+var xhr;
+var last_href;
+ 
+String.prototype.decodeHTML = function() {
+        return $("<div>", {html: "" + this}).html();
+};
+ 
+$(function() {
+ 
+        var $main = $(".section"),
+        last_href = window.location.pathname,
+        ajinit = function() {
+// ÇÄÅÑÜ ÂÑÅ ÑÑÛËÊÈ ÁÈÍÄÓÅÌ
+                $("a").unbind("click").click(function(e) {
+                        e.preventDefault();
+                        var href = $(this).attr("href");
+                       
+                        if (href.indexOf(document.domain) > -1 || href.indexOf(':') === -1) {
+                                if (typeof xhr != 'undefined') {
+                                        xhr.abort();
+                                }
+                                history.pushState({}, '', href);
+                                loadPage(href);
+                        }
+                        return false;
+                });
+                if (loaded) loaded = 2;
+               
+                document_ready(); // İÒÎ ÂÑÅ ÄÅÉÑÒÂÈß ×ÒÎ ĞÀÍÜØÅ Ó ÒÅÁß Â ÁËÎÊÅ $(document).ready() áûëè, ÿ èõ â îòäåëüíóş ôóíêöèş âûíåñ òèïà, ÷òîá ìîæíî áûëî ïåğåâûçûâàòü
+                $(document).scrollTop(0);
+        },
+ 
+        loadPage = function(href) {
+                if (last_href != href) {
+                        $('.loading-page span').stop(true).width(0).stop(true);
+                        $('.loading-page').show();
+                        xhr = $.ajax({
+                                url: href,
+                                method: 'GET',
+                                dataType: 'html',
+                                cache: false,
+                                async: true,
+                                success: function(html) {
+                                        var $body = $(html.substr(html.indexOf('<body'), html.indexOf('</body') - html.indexOf('<body')));
+                                        var $img = $body.find('img'),
+                                                progress = $('.loading-page span'),
+                                                size=$img.size(),
+                                                counter=0;
+                                       
+                                        $img.load(function(e){
+                                                counter++;
+                                                var percent = Math.floor(counter*50/size) + 50;
+                                                $('.loading-page span').stop().animate({'width':percent+'%'},400);
+                                                if(counter==size ) {
+ 
+                                                        document.title = html
+                                                        .match(/<title>(.*?)<\/title>/)[1]
+                                                        .trim()
+                                                        .decodeHTML();
+                                                       
+                                                        $('.loading-page').fadeOut(400, function() { $('.loading-page span').stop(true).width(0); });
+                                                       
+                                                        $('body').replaceWith($body);                                          
+                                                        last_href = href;
+                                                       
+                                                        ajinit();
+                                                }
+                                        });
+                                },
+                                progress: function(e) {
+                                        if (e.lengthComputable) {
+                                                $('.loading-page span').stop().animate({'width': Math.round((e.loaded / e.total) * 50) + '%'},400);
+                                        }
+                                }
+                        });
+                }
+        };
+ 
+        ajinit();
+ 
+        $(window).on("popstate", function(e) {
+                if (e.originalEvent.state !== null) {
+                        $('.loading-page span').stop(true).width(0).stop(true);
+                        $('.loading-page').show();
+                        if (typeof xhr != 'undefined') {
+                                xhr.abort();
+                        }
+                        loadPage(location.href);
+                }
+        });
+});

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="40mm" height="63mm" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 40 63">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str1 {stroke:#1F1A17;stroke-width:0.0762}
+    .str0 {stroke:#383431;stroke-width:0.0762}
+    .str2 {stroke:#4D4948;stroke-width:0.0762}
+    .str3 {stroke:#F8C300;stroke-width:0.0762}
+    .fil1 {fill:#1F1A17}
+    .fil0 {fill:#383431}
+    .fil2 {fill:#4D4948}
+    .fil3 {fill:#84C225}
+    .fil5 {fill:#DB214C}
+    .fil4 {fill:#F8C300}
+    .fil6 {fill:#77B82B}
+    .fil8 {fill:#C22B3C}
+    .fil7 {fill:#F4B200}
+   ]]>
+  </style>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_312127832">
+   <polygon id="_312128648" class="fil0 str0" points="0,52.9999 20.0001,63 20.0001,37.9999 0,27.9998 "/>
+   <polygon id="_312128576" class="fil1 str1" points="20.0001,37.9999 40.0001,27.9998 40.0001,52.9999 20.0001,63 "/>
+   <polygon id="_312128504" class="fil2 str2" points="0,27.9998 20.0001,17.9998 40.0001,27.9998 20.0001,37.9999 "/>
+   <path id="_312128432" class="fil0" d="M20.1664 27.9435c-12.2094,0 -11.2477,-2.8186 2.8626,-8.4293l7.8944 3.9473c-2.5537,1.2747 -6.1374,2.7684 -10.757,4.482z"/>
+   <path id="_312128360" class="fil0" d="M20.1664 27.9435c-12.2094,0 -11.2477,-2.8186 2.8626,-8.4293l7.8944 3.9473c-2.5537,1.2747 -6.1374,2.7684 -10.757,4.482z"/>
+   <path id="_312128288" class="fil3" d="M20.0001 27.9998c-13.3112,0 -20.0001,-6.6888 -20.0001,-20 13.3112,0 20.0001,6.6889 20.0001,20z"/>
+   <path id="_312128216" class="fil4" d="M20.0001 17.9998c9.9741,0 15,-5.0259 15,-15 -9.9742,0 -15,5.0259 -15,15z"/>
+   <path id="_312128144" class="fil5" d="M20.0001 10.6873c-6.8174,0 -10.0001,-3.1826 -10.0001,-10 6.8174,0 10.0001,3.1826 10.0001,10z"/>
+   <path id="_312128072" class="fil5" d="M27.5001 17.9999c1.3806,0 2.5001,1.1194 2.5001,2.5 0,1.3803 -1.1195,2.5001 -2.5001,2.5001 -1.3806,0 -2.5,-1.1198 -2.5,-2.5001 0,-1.3806 1.1194,-2.5 2.5,-2.5z"/>
+   <path id="_312128000" class="fil6" d="M0 7.9998l20.0001 20c-13.3112,0 -20.0001,-6.6888 -20.0001,-20z"/>
+   <path id="_312127928" class="fil7 str3" d="M35.0001 2.9998l-15 15c9.9741,0 15,-5.0259 15,-15z"/>
+   <path id="_312127856" class="fil8" d="M10 0.6873l10.0001 10c-6.8175,0 -10.0001,-3.1826 -10.0001,-10z"/>
+  </g>
+ </g>
+</svg>
