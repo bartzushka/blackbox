@@ -961,7 +961,9 @@ section article
 {
 	border-bottom: 1px solid red !important;
 }
-
+.size{
+	 font-style: normal;
+}
 .files
 {
 	font-size: 14px;
