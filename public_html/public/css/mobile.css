@@ -1,3 +1,4 @@
+
 .menu-text {
   
 
@@ -59,14 +60,18 @@
     height: 100px;
     float: right;
 }
-header{
-
+header {
     width: 100%;
+    position: absolute;
     display: block;
     height: 100px;
-
+        top: 0;
+        left: 0;
+    z-index: 15;
+    background-color: white;
 }
 .items {
+	margin-top: 100px;
 	padding-top:0;
 }
 .items ul li{
@@ -127,10 +132,12 @@ header{
     top: 40px;
 }
 .tag-items{
-	width: calc(100% - 40px);
-	left:40px;
-	outline: none;
-	top: 55%;
+    width: calc(100% - 40px);
+    left: 40px;
+     height: calc(100% - 180px);
+    overflow-y: scroll;
+    outline: none;
+    top: 52%;
 }
 .tags .close{
     top: 40px;
@@ -161,3 +168,4 @@ header{
 .main-container {
 	margin: 0;
 }
+
