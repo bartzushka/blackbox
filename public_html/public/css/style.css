@@ -18,6 +18,7 @@ html,body
 }
 .unactive {
 color:#cccccc !important;
+cursor: default;
 }
 
 .clear
@@ -583,7 +584,9 @@ color:#cccccc !important;
 {
 	opacity: 1;
 }
-
+.no{
+	display: none;
+}
 .date
 {
 
@@ -961,7 +964,9 @@ section article
 {
 	border-bottom: 1px solid red !important;
 }
-
+.size{
+	 font-style: normal;
+}
 .files
 {
 	font-size: 14px;
