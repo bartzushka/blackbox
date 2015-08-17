@@ -21,7 +21,11 @@ $(function()
 		ajinit = function()
 		{
 
+<<<<<<< HEAD
 			$("a").not('unactive').unbind("click").click(function(e)
+=======
+			$("a").not('.unactive').unbind("click").click(function(e)
+>>>>>>> master
 				{
 					e.preventDefault();
 					var href = $(this).attr("href");
@@ -778,8 +782,15 @@ function sendForm()
 	}
 
 
+<<<<<<< HEAD
 
 	$.ajax(
+=======
+	form.submit( function()
+		{
+
+			$.ajax(
+>>>>>>> master
 				{
 					type: "POST",
 					url: form.attr( 'action' ),
