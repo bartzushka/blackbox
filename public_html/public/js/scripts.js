@@ -21,7 +21,11 @@ $(function()
 		ajinit = function()
 		{
 
+<<<<<<< HEAD
+			$("a").not('unactive').unbind("click").click(function(e)
+=======
 			$("a").not('.unactive').unbind("click").click(function(e)
+>>>>>>> master
 				{
 					e.preventDefault();
 					var href = $(this).attr("href");
@@ -753,7 +757,7 @@ function sendForm()
 {
 
 	var form = $('#makeOrder');
-	var inputs = form.find('input:not(:hidden)').not('#file');
+	var inputs = form.find('input').not('#file');
 	var file_indexes=[];
 	var i = 0;
 	var formData = new FormData();
@@ -778,10 +782,15 @@ function sendForm()
 	}
 
 
+<<<<<<< HEAD
+
+	$.ajax(
+=======
 	form.submit( function()
 		{
 
 			$.ajax(
+>>>>>>> master
 				{
 					type: "POST",
 					url: form.attr( 'action' ),
@@ -798,7 +807,7 @@ function sendForm()
 						console.log( response);
 					}
 				});
-		});
+	
 
 	$('#toPopup').addClass('flip animated');
 	$('#makeOrder').css({'opacity':'0'});
@@ -808,6 +817,7 @@ function sendForm()
 			$('#status').fadeIn();
 			$('#toPopup').removeClass('flip animated');
 		},800);
+			
 };
 
 function validateForm()
