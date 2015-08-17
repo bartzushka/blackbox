@@ -18,6 +18,7 @@ html,body
 }
 .unactive {
 color:#cccccc !important;
+cursor: default;
 }
 
 .clear
@@ -67,7 +68,6 @@ color:#cccccc !important;
 {
 	list-style: none;
 	padding: 10px 0;
-	cursor: pointer;
 
 }
 .menu-items ul li:first-child
@@ -583,7 +583,9 @@ color:#cccccc !important;
 {
 	opacity: 1;
 }
-
+.no{
+	display: none;
+}
 .date
 {
 
