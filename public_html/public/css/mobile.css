@@ -162,8 +162,8 @@ header {
     box-sizing: border-box;
     width: 100%;
     left: 0;
-    height: calc(100% - 100px);
-    overflow-y: scroll;
+   height: calc(100% - 140px);
+
     outline: none;
      top: 100px;
 

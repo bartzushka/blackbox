@@ -1098,3 +1098,7 @@ section article
 .polylines {
 	position: relative;
 }
+.custom{
+	position: absolute;
+	width: auto;
+}
