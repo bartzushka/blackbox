@@ -21,7 +21,7 @@ $(function()
 		ajinit = function()
 		{
 
-			$("a").not('unactive').unbind("click").click(function(e)
+			$("a").not('.project_link').unbind("click").click(function(e)
 				{
 					e.preventDefault();
 					var href = $(this).attr("href");
