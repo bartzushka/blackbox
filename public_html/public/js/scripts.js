@@ -1,6 +1,7 @@
 var loaded = 0;
 var xhr;
 var last_href;
+var files = [];
 
 String.prototype.decodeHTML = function()
 {
@@ -183,28 +184,28 @@ $( document ).ready(function()
 				}
 				checkTag($(this));
 			});
-		
+
 		$('.tag-category h3').click(function()
-		{
-
-			if(!$(this).parents('.tag-category').hasClass('active'))
 			{
-				$('.tag-category').removeClass('active');
-				$('.tag-cloud').stop().slideUp(300);
-				$(this).parents('.tag-category').addClass('active');
-				$(this).parents('.tag-category').children('.tag-cloud').stop().slideDown(300);
-		
-			}
-			else if($(this).parents('.tag-category').hasClass('active')==true)
-			{
-				
-				$(this).parents('.tag-category').removeClass('active');
-				$(this).parents('.tag-category').children('.tag-cloud').stop().slideUp(300);
-				
-				
-			}
 
-		})
+				if(!$(this).parents('.tag-category').hasClass('active'))
+				{
+					$('.tag-category').removeClass('active');
+					$('.tag-cloud').stop().slideUp(300);
+					$(this).parents('.tag-category').addClass('active');
+					$(this).parents('.tag-category').children('.tag-cloud').stop().slideDown(300);
+
+				}
+				else if($(this).parents('.tag-category').hasClass('active')==true)
+				{
+
+					$(this).parents('.tag-category').removeClass('active');
+					$(this).parents('.tag-category').children('.tag-cloud').stop().slideUp(300);
+
+
+				}
+
+			})
 
 	});
 
@@ -301,16 +302,10 @@ function document_ready()
 		{
 			$('#reset_all').click();
 		})
-	
 
-	$('#upload').click(function()
-		{
-			$('#file').click();
-			$('.file dfn').html('');
-			$('.file span').show();
-			$('#popup_content form button ').css({"margin-top":'35px'});
 
-		})
+
+
 	$('#closePopup').click(function()
 		{
 			disablePopup();
@@ -376,22 +371,47 @@ function document_ready()
 			}
 		});
 
-
-
-	$('#file').change(function()
+	
+	
+	$('#upload').click(function()
 		{
 
 
-			var files = $(this)[0].files;
+			$('.file dfn').html('');
+			$('.file span').hide();
+			$('#popup_content form button ').css({"margin-top":'0px'});
 
 
+
+			$('#file').click();
+
+
+
+		})
+		var all_files = [];
+	$('#file').change(function()
+		{
+	
+
+		var current_files = $(this)[0].files ;
+		for(var i = 0; i<current_files.length; i++){
+			all_files.push(current_files[i]);
+		}
+		
+		
+
+		 files = all_files;
+		console.log(files);
 			for (var i = 0; i < files.length; i++)
 			{
-				console.log(files[i].name+files[i].size/1000000);
+			
+
 				if(files[i].size/1000000 > 2)
 				{
 					$('.size').css({'color':'red'});
 					$('#toPopup').addClass('shake animated');
+					files.splice(i,1);
+					console.log(files);
 					setTimeout(function()
 						{
 							$('#toPopup').removeClass('shake animated');
@@ -401,9 +421,11 @@ function document_ready()
 				}
 				else
 				{
+					
 					$('.file span').hide();
 					$('.file dfn').append('<a class="active-tag" alt="'+i+'">'+files[i].name+'<i class="tag-x"><svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="15mm" height="15mm" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"viewBox="0 0 15 15"><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"/><polygon class="fil0" points="8,0 8,7 15,7 15,8 8,8 8,15 7,15 7,8 0,8 0,7 7,7 7,0 "/></g></svg></i></a>');
 					$('#popup_content form button ').css({"margin-top":'-6px'});
+				
 				}
 			}
 
@@ -414,6 +436,9 @@ function document_ready()
 
 			$('.files .active-tag .tag-x').click(function()
 				{
+					var ind = $(this).parents('.active-tag').attr('alt');
+					files.splice(ind,1);
+					console.log(files);
 					$(this).parents('.active-tag').remove();
 					var i = 0;
 
@@ -438,7 +463,6 @@ function document_ready()
 		}
 
 	)
-
 
 	function openTags()
 	{
@@ -646,7 +670,7 @@ function document_ready()
 
 			$('#makeOrder').find('input:not(:hidden)').not('#file').each(function()
 				{
-					console.log('removing');
+
 					$(this).removeClass('required');
 
 				})
@@ -766,49 +790,28 @@ function sendForm()
 
 	var form = $('#makeOrder');
 	var inputs = form.find('input').not('#file');
-	var file_indexes=[];
-	var i = 0;
 	var formData = new FormData();
-	
 
-	$('.file dfn').find('a').each(function()
-		{
-
-			file_indexes[i]=$(this).attr('alt');
-			i++;
-
-		})
-
-	var files = form.find('#file')[0].files;
-	var approved_files=[];
-
-	for (var j=0; j<file_indexes.length;j++)
-	{
-		approved_files[j] = files[file_indexes[j]];
-		formData.append('files',approved_files[j]);
-		console.log(formData);
-	}
-
-
+	formData = files;
 
 	$.ajax(
-				{
-					type: "POST",
-					url: form.attr( 'action' ),
-					dataType: 'json',
-					 contentType: false,
-    				processData: false,
-					data:
-					{
-						inputs: inputs.serialize(),
-						attachments: formData
-					},
-					success: function( response )
-					{
-						console.log( response);
-					}
-				});
-	
+		{
+			type: "POST",
+			url: form.attr( 'action' ),
+			dataType: 'json',
+			contentType: false,
+			processData: false,
+			data:
+			{
+				inputs: inputs.serialize(),
+				attachments: formData
+			},
+			success: function( response )
+			{
+				console.log( response);
+			}
+		});
+
 
 	$('#toPopup').addClass('flip animated');
 	$('#makeOrder').css({'opacity':'0'});
@@ -818,7 +821,7 @@ function sendForm()
 			$('#status').fadeIn();
 			$('#toPopup').removeClass('flip animated');
 		},800);
-			
+
 };
 
 function validateForm()
