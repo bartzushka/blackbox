@@ -868,7 +868,7 @@ function change(el,mnozh)
 function resize()
 {
 
-
+console.log('1');
 	var container_width = $('.items ul').width();
 	var default_item_width = 360;
 

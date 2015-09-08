@@ -92,8 +92,7 @@ header {
 }
 .items ul li{
 	width:100%;
-	
-	height:250px;
+	min-height: 213px;
 }
 .items ul li article{
 	opacity: 1;
