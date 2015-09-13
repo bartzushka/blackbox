@@ -173,6 +173,7 @@ $(function()
 $( document ).ready(function()
 	{
 		document_ready();
+
 		$('.tag-cloud').on('click','span',function(e)
 			{
 
@@ -222,6 +223,7 @@ function document_ready()
 	var popupStatus=0;
 
 	resize();
+	centerCustom();
 	animation('.items ul li article',50,1);
 	$('.active').children('.tag-cloud').show();
 	$('.active-tag').parents('.tag-category').addClass('has-tag');
@@ -408,7 +410,7 @@ function document_ready()
 
 			files = all_files;
 			checkFiles();
-			
+
 
 			for (var i = 0; i < files.length; i++)
 			{
@@ -475,10 +477,20 @@ function document_ready()
 		}
 
 	)
+	function centerCustom()
+	{
 
+		$('.custom').each(function()
+			{
+				var width =  $(this).width();
+				$(this).css({'left':'calc(50% - '+width/2+'px)'});
+			})
+
+
+	}
 	function checkFiles()
 	{
-	
+
 		if(files.length >= 5 )
 		{
 			files.splice(5,files.length);
@@ -489,15 +501,15 @@ function document_ready()
 			$('#upload').css({'visibility':'visible'});
 			$('.files dfn').css({'left':'25px'});
 		}
-			var size = 0;
+		var size = 0;
 		for(var i = 0; i<files.length; i++)
 		{
 			size+=files[i].size;
 			console.log(size);
 		}
-	if(size/1000000 > 2)
+		if(size/1000000 > 2)
 		{
-			
+
 			$('.size').css({'color':'red'});
 			$('#toPopup').addClass('shake animated');
 			files.splice(0,files.length);

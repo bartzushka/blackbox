@@ -1,7 +1,7 @@
 var loaded = 0;
 var xhr;
 var last_href;
-
+var files = [];
 String.prototype.decodeHTML = function()
 {
 	return $("<div>", {html: "" + this}).html();
@@ -62,6 +62,7 @@ $(function()
 						{
 							//var $body = $(html.substr(html.indexOf('<body'), html.indexOf('</body') - html.indexOf('<body')));
 							var $body = $(html.substr(html.indexOf('<ins'), html.indexOf('</ins') - html.indexOf('<ins')));
+							var title = html.substr(html.indexOf('<title>'), html.indexOf('</title>') - html.indexOf('<title')).split('>')[1];
 							var $img = $body.find('img'),
 
 
@@ -83,7 +84,7 @@ $(function()
 												$(window).scrollTop(0);
 												$('#loader').stop(true).width(0);
 												$('.container').replaceWith($body);
-
+												document.title = title;
 												last_href = href;
 												$('.background').hide();
 												$('.background').css({'background-color':'transparent'});
@@ -172,6 +173,7 @@ $( document ).ready(function()
 	{
 
 		resize();
+		centerCustom();
 		$('.tag-cloud').on('click','span',function(e)
 			{
 
@@ -394,14 +396,7 @@ $( document ).ready(function()
 
 
 			})
-		$('#upload').click(function()
-			{
-				$('#file').click();
-				$('.file dfn').html('');
-				$('.file span').show();
-				$('#popup_content form button ').css({"margin-top":'35px'});
 
-			})
 		$('#closePopup').click(function()
 			{
 				disablePopup();
@@ -468,22 +463,50 @@ $( document ).ready(function()
 				}
 			});
 
+		$('#upload').click(function()
+			{
 
 
+				$('.file dfn').html('');
+				$('.file span').hide();
+				$('#popup_content form button ').css({"margin-top":'0px'});
+
+
+
+				$('#file').click();
+
+
+
+			})
+
+		var all_files = [];
 		$('#file').change(function()
 			{
 
 
-				var files = $(this)[0].files;
+
+
+
+				var current_files = $(this)[0].files ;
+				for(var i = 0; i<current_files.length; i++)
+				{
+					all_files.push(current_files[i]);
+				}
+
+				files = all_files;
+				checkFiles();
 
 
 				for (var i = 0; i < files.length; i++)
 				{
-					console.log(files[i].name+files[i].size/1000000);
+
+
 					if(files[i].size/1000000 > 2)
 					{
 						$('.size').css({'color':'red'});
 						$('#toPopup').addClass('shake animated');
+						files.splice(i,1);
+						console.log(files);
 						setTimeout(function()
 							{
 								$('#toPopup').removeClass('shake animated');
@@ -493,20 +516,31 @@ $( document ).ready(function()
 					}
 					else
 					{
+
 						$('.file span').hide();
 						$('.file dfn').append('<a class="active-tag" alt="'+i+'">'+files[i].name+'<i class="tag-x"><svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="15mm" height="15mm" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"viewBox="0 0 15 15"><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"/><polygon class="fil0" points="8,0 8,7 15,7 15,8 8,8 8,15 7,15 7,8 0,8 0,7 7,7 7,0 "/></g></svg></i></a>');
 						$('#popup_content form button ').css({"margin-top":'-6px'});
+
 					}
 				}
+
+
 
 				centerPopup();
 
 
 				$('.files .active-tag .tag-x').click(function()
 					{
+
+
+						//var ind = $(this).parents('.active-tag').attr('alt');
+						var ind = $(this).parents('.active-tag').index();
+						console.log(ind);
+						files.splice(ind,1);
+						console.log(files);
 						$(this).parents('.active-tag').remove();
 						var i = 0;
-
+						checkFiles();
 						$('.file').find('.active-tag').each(function()
 							{
 								if($(this).length>0)
@@ -525,15 +559,59 @@ $( document ).ready(function()
 
 
 					})
+			}
 
-			})
+		)
+
+		function centerCustom()
+		{
+
+			$('.custom').each(function()
+				{
+					var width =  $(this).width();
+					$(this).css({'left':'calc(50% - '+width/2+'px)'});
+				})
 
 
+		}
+		function checkFiles()
+		{
 
+			if(files.length >= 5 )
+			{
+				files.splice(5,files.length);
+				$('#upload').css({'visibility':'hidden'});
+				$('.files dfn').css({'left':'0'});
+			}else if(files.length < 5)
+			{
+				$('#upload').css({'visibility':'visible'});
+				$('.files dfn').css({'left':'25px'});
+			}
+			var size = 0;
+			for(var i = 0; i<files.length; i++)
+			{
+				size+=files[i].size;
+				console.log(size);
+			}
+			if(size/1000000 > 2)
+			{
 
+				$('.size').css({'color':'red'});
+				$('#toPopup').addClass('shake animated');
+				files.splice(0,files.length);
+				$('#upload').css({'visibility':'visible'});
+				$('.files dfn').css({'left':'25px'});
+				$('.file dfn').html('');
+				$('.file span').show();
+				setTimeout(function()
+					{
+						$('#toPopup').removeClass('shake animated');
+						centerPopup();
+					},500);
 
-
-
+			}
+			console.log(files);
+		}
 
 		function openTags()
 		{
@@ -868,7 +946,7 @@ function change(el,mnozh)
 function resize()
 {
 
-console.log('1');
+	console.log('1');
 	var container_width = $('.items ul').width();
 	var default_item_width = 360;
 
