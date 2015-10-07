@@ -806,7 +806,12 @@ function resize()
 
 	$('.items ul li').css({'width':percents+'%','height': Math.floor(pixels/1.5)});
 
-	checkFooter();
+  var height = $('.menu').height();
+
+	$('.menu-text').css({'top':height/2-$('.menu-text').height()});
+	$('.facebook').css({'top':height-50+'px' ,'display':'block'});
+
+		checkFooter();
 }
 
 function checkFooter()
