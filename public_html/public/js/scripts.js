@@ -383,9 +383,8 @@ function document_ready()
 		{
 
 
-			$('.file dfn').html('');
-			$('.file span').hide();
-			$('#popup_content form button ').css({"margin-top":'0px'});
+		//	$('.file span').hide();
+
 
 
 
@@ -397,7 +396,7 @@ function document_ready()
 	var all_files = [];
 	$('#file').change(function()
 		{
-
+	$('#popup_content form button ').css({"margin-top":'35px'});
 
 
 
@@ -410,7 +409,7 @@ function document_ready()
 
 			files = all_files;
 			checkFiles();
-
+	$('.file dfn').html('');
 
 			for (var i = 0; i < files.length; i++)
 			{
@@ -418,12 +417,15 @@ function document_ready()
 
 				if(files[i].size/1000000 > 2)
 				{
+
 					$('.size').css({'color':'red'});
 					$('#toPopup').addClass('shake animated');
+
 					files.splice(i,1);
 					console.log(files);
 					setTimeout(function()
 						{
+
 							$('#toPopup').removeClass('shake animated');
 							centerPopup();
 						},500);
@@ -433,8 +435,14 @@ function document_ready()
 				{
 
 					$('.file span').hide();
-					$('.file dfn').append('<a class="active-tag" alt="'+i+'">'+files[i].name+'<i class="tag-x"><svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="15mm" height="15mm" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"viewBox="0 0 15 15"><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"/><polygon class="fil0" points="8,0 8,7 15,7 15,8 8,8 8,15 7,15 7,8 0,8 0,7 7,7 7,0 "/></g></svg></i></a>');
-					$('#popup_content form button ').css({"margin-top":'-6px'});
+					$('#popup_content form button ').css({"margin-top":'0px'});
+								if(files[i].name.length >20){
+									var name = files[i].name.substring(0,20)+'...';
+								}else{
+									var name = files[i].name;
+								}
+					$('.file dfn').append('<a class="active-tag" alt="'+i+'">'+name+'<i class="tag-x"><svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="15mm" height="15mm" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"viewBox="0 0 15 15"><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"/><polygon class="fil0" points="8,0 8,7 15,7 15,8 8,8 8,15 7,15 7,8 0,8 0,7 7,7 7,0 "/></g></svg></i></a>');
+
 
 				}
 			}
@@ -728,22 +736,27 @@ function document_ready()
 			$("#toPopup").addClass("bounceOutUp animated");
 
 			$('#iwant').removeClass('disabled');
-			$('.size').css({'color':'black'});
 
-			$('#makeOrder').find('input:not(:hidden)').not('#file').each(function()
-				{
 
-					$(this).removeClass('required');
-
-				})
 
 			setTimeout(function()
 				{
+					$('#makeOrder').find('input:not(:hidden)').not('#file').each(function()
+						{
 
+							$(this).removeClass('required');
+							$(this).val('');
+
+						})
+					$('#status').hide();
+					$('#makeOrder').css({'opacity':'1'});
 					$("#toPopup").removeClass("bounceOutUp animated");
 
 					$("#toPopup").hide();
 					popupStatus = 0;
+					$('.size').css({'color':'black'});
+						$('.file span').show();
+						$('.file dfn').html('');
 
 				},600);
 		}

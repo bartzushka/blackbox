@@ -113,6 +113,7 @@ $(function()
 
 		$('.refresh').click(function()
 			{
+					$('body').unbind('touchmove');
 				var active_tags = [];
 
 				var i = 0;

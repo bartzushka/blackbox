@@ -515,7 +515,7 @@ cursor: default;
 }
 
 .item img
-{	
+{
 
 	position: absolute;
 	top: 50%;
@@ -533,7 +533,7 @@ cursor: default;
 	-o-transition-duration: 0.7s;
 	-ms-transition-duration: 0.7s;
 	transition-duration: 0.7s;
-	
+
 }
 .item-detail
 {
@@ -573,7 +573,7 @@ cursor: default;
 {
 	width:120%;
 	height: 120%;
-	
+
 
 }
 .item:hover .item-detail
@@ -1033,7 +1033,11 @@ section article
 }
 .grey
 {
-	-webkit-filter: grayscale(100%);
+		filter: grayscale(1) brightness(70%);
+		-webkit-filter: grayscale(1) brightness(70%);
+		-moz-filter: grayscale(1) brightness(70%);
+		-o-filter: grayscale(1) brightness(70%);
+		-ms-filter: grayscale(1) brightness(70%);
 	-webkit-box-shadow: 0 0 40px rgba(255,255,255,.6), inset 0 0 40pxrgba(255,255,255,1);
 	-moz-box-shadow: 0 0 40px rgba(255,255,255,.6), inset 0 0 40pxrgba(255,255,255,1);
 	box-shadow: 0 0 40px rgba(255,255,255,.6), inset 0 0 40pxrgba(255,255,255,1);

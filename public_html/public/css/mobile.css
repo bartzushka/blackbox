@@ -2,7 +2,7 @@ html,body{
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 .menu-text {
-  
+
 
     -webkit-transform: rotate(0);
     transform: rotate(0);
@@ -11,16 +11,18 @@ html,body{
     cursor: pointer;
 	top: 40px;
     right: 0;
-    
-}
 
+}
+.background{
+	margin-top:-100px;
+}
 #loader{
-	background-color: transparent;
+	background-color: red;
 }
 .logo {
     display: inline-block;
     width: 33.33%;
-    margin:15px auto; 
+    margin:15px auto;
     z-index: 20;
     float: left;
     position: relative;
@@ -46,7 +48,7 @@ html,body{
 }
 .main{
 	margin:0;
-	
+
 }
 .tags{
     position: relative;
@@ -96,13 +98,13 @@ header {
 }
 .items ul li article{
 	opacity: 1;
-	
+
 }
 .facebook{
 
     position: absolute;
     margin: 0 auto;
- 
+
     bottom: 0;
 
     top: calc(50% - 12.5px);
@@ -139,8 +141,8 @@ header {
 	    z-index: 14;
 }
 .full-tag .close{
-	    top: 47px;	
-	 
+	    top: 47px;
+
     right: -8px;
 }
 .full-tag{
@@ -224,4 +226,3 @@ header {
 	-o-transform: none;
 	transform: none;
 }
-
