@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="40px" height="47px" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 40 47">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil1 {fill:white}
+    .fil0 {fill:#31609B}
+   ]]>
+  </style>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <polygon class="fil0" points="20,0.4059 40,11.9529 40,35.047 20,46.594 0,35.047 0,11.9529 "/>
+  <path class="fil1" d="M17.5 33.5l4 0 0 -9 3.5 0 0.5 -3.5 -4 0 0 -3c0.1325,-0.6313 0.6013,-0.974 1.5,-1 0.8571,0 1.643,0 2.5001,0 0,-1.0898 -0.0002,-2.2731 -0.0002,-3.3629 -1.0522,-0.0411 -2.1053,-0.1808 -3.1567,-0.1234 -2.9396,0.1606 -4.8432,2.2779 -4.8432,4.9863l0 2.5 -3.0001 0 0 3.5 3.0001 0 0 9z"/>
+ </g>
+</svg>

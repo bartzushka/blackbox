@@ -1,5 +1,10 @@
 html,body{
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+margin: 0px;
+padding: 0px;
+width: 100%;
+overflow-x: hidden;
 }
 .menu-text {
 
@@ -9,20 +14,18 @@ html,body{
 	width: 25px;
     font-weight: bold;
     cursor: pointer;
-	top: 40px;
+	top: 45px;
     right: 0;
 
 }
-.background{
-	margin-top:-100px;
-}
+
 #loader{
 	background-color: red;
 }
 .logo {
     display: inline-block;
     width: 33.33%;
-    margin:15px auto;
+    margin: 12px auto;
     z-index: 20;
     float: left;
     position: relative;
@@ -100,21 +103,17 @@ header {
 	opacity: 1;
 
 }
-.facebook{
-
+.facebook {
     position: absolute;
     margin: 0 auto;
 
-    bottom: 0;
-
-    top: calc(50% - 12.5px);
-    left: calc(50% - 23px);
+    top: calc(50% - 23.5px);
+    left: calc(50% - 20px);
     width: 40px;
-    height: 25px;
-    background: #3b5998;
-    cursor: pointer;
+    height: 47px;
 
-}
+    cursor: pointer;
+	}
 .footer {
     position: relative;
     display: block;
@@ -196,7 +195,15 @@ header {
     margin-top: 80px;
 }
 .main-container {
-	margin: 0;
+      margin: 100px auto 0;
+    padding-top: 0;
+}
+.position{
+	padding-bottom: 0;
+	margin-bottom: 37px;
+	font-size: 12px;
+	padding-left: 10px;
+	padding-top:1px;
 }
 .refresh:hover
 {
@@ -225,4 +232,156 @@ header {
 	-ms-transform: none;
 	-o-transform: none;
 	transform: none;
+}
+.mbanner {
+	    background-color: #333333;
+	display: block;
+	position: relative;
+	min-height: 600px;
+	margin-top:100px;
+	text-align: center;
+
+background-position: center center;
+background-repeat: no-repeat;
+}
+.banner a{color:white;}
+.mbanner h1 {
+    display: block;
+		color:white;
+  font-size: 52px;
+      letter-spacing: 1.3px;
+    margin: 0 auto -11px;
+		  font-family: 'PierSans-Bold';
+
+}
+
+.mbanner p{
+	font-size: 24px;
+	font-family: 'Roboto';
+	  color: white;
+	    font-weight: 200;
+			    margin-bottom: 27px
+}
+.mbanner .ps {
+    color: #9ac43c;
+    font-family: 'Roboto';
+    font-weight: 100;
+    font-size: 24px;
+    font-style: normal;
+    display: inline-block;
+    margin: 0 4px -5px;
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+.mbanner .footer-content {
+    color: white;
+    position: fixed;
+    width: calc(100% - 320px);
+    margin-left: 40px;
+    margin-top: 40px;
+}
+.mbanner .mbutton{
+    margin: 40px auto 36px;
+
+}
+.micon1 {
+	width: 110px;
+margin: 56px auto 27px;
+padding-right: 20px;
+}
+.micon1 i{
+    margin-left: 10px;
+}
+.micon2{
+	margin-top:6px;
+}
+.micon2 i {
+	padding-right:9px;
+}
+.micon3 i {
+	padding-right:7px;
+	letter-spacing: 0.9px;
+}
+.marbot{
+	margin-bottom:61px!important;
+}
+.mplus1{
+	margin-top:-4px;
+	margin-bottom:24px;
+}
+.micon3{
+	margin-top: 3px;
+	margin-left: 4px;
+}
+.mplus2 {
+    margin-top: 23px;
+    display: block;
+    margin-bottom: 25px;
+}
+.micons{
+	text-align: center;
+}
+.micons i {
+    color: white;
+    display: block;
+    margin-top: 17px;
+      margin-bottom: 14px;
+		font-family: 'OpenSans-Italic';
+		font-size:18px;
+		font-style: normal;
+}
+.team .mbutton{
+	margin-bottom: 37px;
+
+}
+.mbutton {
+    margin-bottom: 60px;
+    text-decoration: none;
+    text-align: center;
+    padding: 17px 27px 16px;
+    background-color: #a7cf39;
+    border: solid 2px #a7cf39;
+    font-size: 16px;
+    color: white;
+    position: relative;
+    letter-spacing: 0.1px;
+    cursor: pointer;
+    outline: none;
+    border-radius: 30px;
+    font-family: 'Roboto';
+    font-size: 18px;
+}
+
+.mteam_proj h1{
+
+    padding-top: 25px;
+		padding-bottom:6px;
+font-size: 38px;
+font-family: 'Roboto';
+font-weight: 200;
+}
+.team{
+	    margin: 23px auto;
+}
+.team_desc{
+	border:0;
+}
+.team_name{
+		font-family: 'Roboto';
+		font-size:18px;
+		padding-top: 23px;
+    padding-left: 9px;
+}
+.mcontact{
+	margin-top:18px;
+}
+.mcontact ul li{
+	font-size:16px;
+	padding-bottom: 22px;
+	margin-left:-10px;
+
+}
+.mcontact ul{
+	margin-bottom:25px;
 }

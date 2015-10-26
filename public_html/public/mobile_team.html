@@ -1,16 +1,20 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 	<head>
+
 		<title>
 			blackbox &mdash; Coming Soon
 		</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<meta name="viewport" content="width=device-width, height=device-height, target-densityDpi=device-dpi" />
+		<meta name="format-detection" content="telephone=no">
 		<meta name="description" content="This is a default index page for a new domain."/>
 		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="/public/css/reset.css" />
 		<link rel="stylesheet" href="/public/css/style.css"/>
+		<link rel="stylesheet" href="/public/css/mobile.css"/>
 		<link rel="stylesheet" href="/public/css/invert.css"/>
-		<link rel="stylesheet" href="/public/css/animate.css"/>
+	<link rel="stylesheet" href="/public/css/animate.css"/>
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
@@ -19,70 +23,33 @@
 		</script>
 		<script type="text/javascript" src="/public/js/jquery.nicescroll.min.js">
 		</script>
-		<script type="text/javascript" src="/public/js/autosize.js">
-    </script>
-		<script type="text/javascript" src="/public/js/scripts.js">
+		<script type="text/javascript" src="/public/js/jquery.scrollLock.simple.js">
+		</script>
+
+		<script type="text/javascript" src="/public/js/mobile.js">
 
 		</script>
+
 	</head>
 
 	<body>
 
 		<div id="loader">
 		</div>
-				<div class="background">
-			</div>
+		<div class="background">
+		</div>
 		<header>
 			<div class="menu-block">
 				<div class="menu">
 
-					<div class="logo">
-					<a href="http://blackbox-bartz.dev.lumination.com.ua">
-						<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="40mm" height="63mm" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"viewBox="0 0 40 63">
-						<defs>
-							<style type="text/css">
-								<![CDATA[
-									.str0 {stroke:#1F1A17;stroke-width:0.0762}
-									.str1 {stroke:#383431;stroke-width:0.0762}
-									.str2 {stroke:#4D4948;stroke-width:0.0762}
-									.str3 {stroke:#F8C300;stroke-width:0.0762}
-									.fil0 {fill:#1F1A17}
-									.fil1 {fill:#383431}
-									.fil2 {fill:#4D4948}
-									.fil3 {fill:#84C225}
-									.fil5 {fill:#DB214C}
-									.fil4 {fill:#F8C300}
-									.fil6 {fill:#77B82B}
-									.fil8 {fill:#C22B3C}
-									.fil7 {fill:#F4B200}
-								]]>
-							</style>
-						</defs>
-						<g id="Layer_x0020_1">
-							<metadata id="CorelCorpID_0Corel-Layer"/>
-							<polygon class="fil0 str0" points="-0.0001,27.9999 40.0001,27.9998 40.0001,52.9999 20.0001,63 "/>
-							<polygon class="fil1 str1" points="0,52.9999 20.0001,63 20.0001,27.9681 0,27.9998 "/>
-							<polygon class="fil2 str2" points="0,27.9998 20.0001,17.9998 40.0001,27.9998 20.0001,37.9999 "/>
-							<path class="fil1" d="M20.1664 27.9435c-12.2094,0 -11.2477,-2.8186 2.8626,-8.4293l7.8944 3.9473c-2.5537,1.2747 -6.1374,2.7684 -10.757,4.482z"/>
-							<path class="fil3" d="M20.0001 27.9998c-13.3112,0 -20.0001,-6.6888 -20.0001,-20 13.3112,0 20.0001,6.6889 20.0001,20z"/>
-							<path class="fil4" d="M20.0001 17.9998c9.9741,0 15,-5.0259 15,-15 -9.9742,0 -15,5.0259 -15,15z"/>
-							<path class="fil5" d="M20.0001 10.6873c-6.8174,0 -10.0001,-3.1826 -10.0001,-10 6.8174,0 10.0001,3.1826 10.0001,10z"/>
-							<path class="fil5" d="M27.5001 17.9999c1.3806,0 2.5001,1.1194 2.5001,2.5 0,1.3803 -1.1195,2.5001 -2.5001,2.5001 -1.3806,0 -2.5,-1.1198 -2.5,-2.5001 0,-1.3806 1.1194,-2.5 2.5,-2.5z"/>
-							<path class="fil6" d="M0 7.9998l20.0001 20c-13.3112,0 -20.0001,-6.6888 -20.0001,-20z"/>
-							<path class="fil7 str3" d="M35.0001 2.9998l-15 15c9.9741,0 15,-5.0259 15,-15z"/>
-							<path class="fil8" d="M10 0.6873l10.0001 10c-6.8175,0 -10.0001,-3.1826 -10.0001,-10z"/>
-						</g>
-					</svg>
-
-						</a>
-					</div>
-
 					<div class="menu-text" id="menu-text">
 						<span id="menu">
-							black box
-							<dfn>
-								menu
-							</dfn>
+							<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="24px" height="15px" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"viewBox="0 0 24 15">
+								<g id="Layer_x0020_1">
+									<metadata id="CorelCorpID_0Corel-Layer"/>
+									<path class="fil0" d="M0 14l24 0 0 1 -24 0 0 -1zm0 -6l24 0 0 -1 -24 0 0 1zm0 -8l24 0 0 1 -24 0 0 -1z"/>
+								</g>
+							</svg>
 						</span>
 					</div>
 
@@ -135,14 +102,73 @@
 
 			</div>
 
+			<div class="logo">
+				<a href="http://blackbox-bartz.dev.lumination.com.ua/mobile.html">
+					<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="40mm" height="63mm" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"viewBox="0 0 40 63">
+						<defs>
+							<style type="text/css">
+								<![CDATA[
+									.str0 {stroke:#1F1A17;stroke-width:0.0762}
+									.str1 {stroke:#383431;stroke-width:0.0762}
+									.str2 {stroke:#4D4948;stroke-width:0.0762}
+									.str3 {stroke:#F8C300;stroke-width:0.0762}
+									.fil0 {fill:#1F1A17}
+									.fil1 {fill:#383431}
+									.fil2 {fill:#4D4948}
+									.fil3 {fill:#84C225}
+									.fil5 {fill:#DB214C}
+									.fil4 {fill:#F8C300}
+									.fil6 {fill:#77B82B}
+									.fil8 {fill:#C22B3C}
+									.fil7 {fill:#F4B200}
+								]]>
+							</style>
+						</defs>
+						<g id="Layer_x0020_1">
+							<metadata id="CorelCorpID_0Corel-Layer"/>
+							<polygon class="fil0 str0" points="-0.0001,27.9999 40.0001,27.9998 40.0001,52.9999 20.0001,63 "/>
+							<polygon class="fil1 str1" points="0,52.9999 20.0001,63 20.0001,27.9681 0,27.9998 "/>
+							<polygon class="fil2 str2" points="0,27.9998 20.0001,17.9998 40.0001,27.9998 20.0001,37.9999 "/>
+							<path class="fil1" d="M20.1664 27.9435c-12.2094,0 -11.2477,-2.8186 2.8626,-8.4293l7.8944 3.9473c-2.5537,1.2747 -6.1374,2.7684 -10.757,4.482z"/>
+							<path class="fil3" d="M20.0001 27.9998c-13.3112,0 -20.0001,-6.6888 -20.0001,-20 13.3112,0 20.0001,6.6889 20.0001,20z"/>
+							<path class="fil4" d="M20.0001 17.9998c9.9741,0 15,-5.0259 15,-15 -9.9742,0 -15,5.0259 -15,15z"/>
+							<path class="fil5" d="M20.0001 10.6873c-6.8174,0 -10.0001,-3.1826 -10.0001,-10 6.8174,0 10.0001,3.1826 10.0001,10z"/>
+							<path class="fil5" d="M27.5001 17.9999c1.3806,0 2.5001,1.1194 2.5001,2.5 0,1.3803 -1.1195,2.5001 -2.5001,2.5001 -1.3806,0 -2.5,-1.1198 -2.5,-2.5001 0,-1.3806 1.1194,-2.5 2.5,-2.5z"/>
+							<path class="fil6" d="M0 7.9998l20.0001 20c-13.3112,0 -20.0001,-6.6888 -20.0001,-20z"/>
+							<path class="fil7 str3" d="M35.0001 2.9998l-15 15c9.9741,0 15,-5.0259 15,-15z"/>
+							<path class="fil8" d="M10 0.6873l10.0001 10c-6.8175,0 -10.0001,-3.1826 -10.0001,-10z"/>
+						</g>
+					</svg>
 
+				</a>
+			</div>
 
 
 			<div class="tag-block">
 
 
+
 				<div class="tags">
 
+
+
+					<div class="menu-text" id="tags-text">
+						<span>
+							<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="24px" height="15px" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"viewBox="0 0 24 15">
+								<g id="Layer_x0020_1">
+									<metadata id="CorelCorpID_0Corel-Layer"/>
+									<path class="fil0" d="M0 4.9913l4.9913 -4.9913 19.0087 0 0 15 -19.0087 0 -4.9913 -4.9913 0 -0.0087 0 -5 0 -0.0087zm5.5 5.0087c1.3805,0 2.5,-1.1195 2.5,-2.5 0,-1.3805 -1.1195,-2.5 -2.5,-2.5 -1.3805,0 -2.5,1.1195 -2.5,2.5 0,1.3805 1.1195,2.5 2.5,2.5zm0 -1c0.8283,0 1.5,-0.6717 1.5,-1.5 0,-0.8283 -0.6717,-1.5 -1.5,-1.5 -0.8283,0 -1.5,0.6717 -1.5,1.5 0,0.8283 0.6717,1.5 1.5,1.5zm-0.0943 -8l-4.4057 4.4057 0 4.1886 4.4057 4.4057 17.5943 0 0 -13 -17.5943 0z"/>
+								</g>
+							</svg>
+
+						</span>
+					</div>
+
+
+				</div>
+
+
+				<div class="full-tag">
 					<div class="close" id="close-tags">
 						<div class="x">
 							<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="22px" height="22px" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewBox="0 0 22 22">
@@ -153,25 +179,6 @@
 							</svg>
 						</div>
 					</div>
-
-					<div class="menu-text" id="tags-text">
-						<span>
-							portfolio
-							<dfn>
-								tags
-							</dfn>
-						</span>
-					</div>
-
-					<div class="facebook"  onClick="window.open('http://google.com')">
-
-					</div>
-
-				</div>
-
-
-				<div class="full-tag">
-
 
 					<div class="refresh">
 						<div class="refresh-icon">
@@ -187,7 +194,7 @@
 					<div class="tag-items">
 						<ul >
 							<li>
-								<div class="tag-category active">
+								<div  class="tag-category">
 									<h3>
 										Web
 										<i class="open">
@@ -721,8 +728,7 @@
 							</li>
 
 						</ul>
-					</div>
-					<div class="manage-tags">
+						<div class="manage-tags">
 						<div id="select_all">
 							Выделить все
 						</div>
@@ -730,660 +736,206 @@
 							Сбросить все
 						</div>
 					</div>
+					</div>
+
 
 
 				</div>
+
+
+
+
 
 			</div>
 
 
 		</header>
-			<div class="wrapper">
+		<div class="clear">
+		</div>
+    <div class="wrapper">
+
+        				<div class="main-container">
+
+        					<div class="content-container">
+        						<div class="content">
+
+        							<hgroup class="project team_proj">
+        								<h1>
+        									Команда
+        								</h1>
+
+        							</hgroup>
+                      <section class="team">
+                        <ul>
+                          <li>
+                        <article class="member">
+                            <img src="/public/img/item.png"/>
+                            <div class="team_desc">
+                              <a class="team_name">Хозяинов Алексей</a>
+                              <a class="position">Арт-директор, дизайнер</a>
+                            </div>
+                        </article>
+                      </li>
+                      <li>
+                    <article class="member">
+                        <img src="/public/img/item.png"/>
+                        <div class="team_desc">
+                          <a class="team_name">Хозяинов Алексей</a>
+                          <a class="position">Арт-директор, дизайнер</a>
+                        </div>
+                    </article>
+                  </li>
+                  <li>
+                <article class="member">
+                    <img src="/public/img/item.png"/>
+                    <div class="team_desc">
+                      <a class="team_name">Хозяинов Алексей</a>
+                      <a class="position">Арт-директор, дизайнер</a>
+                    </div>
+                </article>
+              </li>
+              <li>
+            <article class="member">
+                <img src="/public/img/item.png"/>
+                <div class="team_desc">
+                  <a class="team_name">Хозяинов Алексей</a>
+                  <a class="position">Арт-директор, дизайнер</a>
+                </div>
+            </article>
+          </li>
+          <li>
+        <article class="member">
+            <img src="/public/img/item.png"/>
+            <div class="team_desc">
+              <a class="team_name">Хозяинов Алексей</a>
+              <a class="position">Арт-директор, дизайнер</a>
+            </div>
+        </article>
+      </li>
+      <li>
+      <article class="member">
+        <img src="/public/img/item.png"/>
+        <div class="team_desc">
+          <a class="team_name">Хозяинов Алексей</a>
+          <a class="position">Арт-директор, дизайнер</a>
+        </div>
+      </article>
+      </li>
+      <li>
+      <article class="member">
+        <img src="/public/img/item.png"/>
+        <div class="team_desc">
+          <a class="team_name">Хозяинов Алексей</a>
+          <a class="position">Арт-директор, дизайнер</a>
+        </div>
+      </article>
+      </li>
+      <li>
+      <article class="member">
+        <img src="/public/img/item.png"/>
+        <div class="team_desc">
+          <a class="team_name">Хозяинов Алексей</a>
+          <a class="position">Арт-директор, дизайнер</a>
+        </div>
+      </article>
+      </li>
+      <li>
+      <article class="member">
+        <img src="/public/img/item.png"/>
+        <div class="team_desc">
+          <a class="team_name">Хозяинов Алексей</a>
+          <a class="position">Арт-директор, дизайнер</a>
+        </div>
+      </article>
+      </li>
 
 
-				<ins class="container">
-			<div class="top-border"></div>
+                      </ul>
 
-			<div class="main-b">
+                      <div class="clear"></div>
+                        							<div class="detail ">
 
-				<div class="banner">
-					<div class="banner_fg">
-					</div>
-					<div class="bfuter">
+                        								<button id="iwant">
+                        									Я Вас хочу!
+                        								</button>
+                        							</div>
+                  </section>
 
-						<div class="adress">
-							<span style="color:#a6ce39">email:</span>
-							info@blackbox.ua
-						</div>
-
-
-						<div class="email" >
-										+380 67 517 60 12
-						</div>
-
-						<div class="phone">
-							<span style="color:#01abe9">Skype:</span>
-							<a href="skype:echo123?call">blackbox.agency</a>
-						</div>
-
-					</div>
-					<div class="banner-content">
-
-
-						<hgroup>
-							<h3>Полный цикл frontend-разработки для Вашего проекта</h3>
-							<h1>STARTUPS   <i class="ps">&amp</i>   SERVICES</h1>
-						</hgroup>
-
-						<div class="icons">
-							<div class="icon1">
-
-									<i>Prototyping</i>
-							</div>
-
-
-						<div class="plus1">
-
-						</div>
-
-						<div class="icon2">
-
-										<i>UX / UI Design</i>
-						</div>
+        						</div>
+        					</div>
+        				</div>
 
 
 
-<div class="plus2">
+        				<img class="no" src="/public/img/4.png" />
+
+        				<div id="toPopup">
+
+        					<div	id="closePopup">
+        						<div class="x">
+        						<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="22px" height="22px" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"viewBox="0 0 22 22">
+
+        								<g id="Layer_x0020_1">
+        									<metadata id="CorelCorpID_0Corel-Layer"/>
+        									<polygon  points="0,21.2903 10.2903,11 0,0.7097 0.7097,0 11,10.2903 21.2903,0 22,0.7097 11.7097,11 22,21.2903 21.2903,22 11,11.7097 0.7097,22 "/>
+        								</g>
+        							</svg>
+        						</div>
+        					</div>
+
+        					<div id="popup_content">
+        						<span id="status">
+        							Мы получим Ваше сообщение и обязательно с Вами свяжемся
+        						</span>
+        						<form id="makeOrder" enctype='multipart/form-data' action="" >
+        							<input  type="text" id="name" placeholder="Имя" />
+        							<input  type="text" id="phone" placeholder="Номер телефона"/>
+        							<input type="hidden"  />
+        							<input type="email" id="email" placeholder="e-mail" />
+        							<input type="hidden"  />
+        							<input type="file" id="file" name="files[]" data-url="server/php/" multiple accept="image/jpg/doc/png/pdf"/>
+
+        							<div class="file">
+        								<div class="files">
+        									<i class="tag-x" id="upload">
+        										<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="15px" height="15px" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"viewBox="0 0 15 15">
+        											<g id="Layer_x0020_1">
+        												<metadata id="CorelCorpID_0Corel-Layer"/>
+        												<polygon  points="8,0 8,7 15,7 15,8 8,8 8,15 7,15 7,8 0,8 0,7 7,7 7,0 "/>
+        											</g>
+        										</svg>
+        										<span>
+        											Прикрепить до 5ти файлов
+        											<i class="size">
+        												(до 2 Мб)
+        											</i>
+        										</span>
+        									</i>
+        									<dfn>
+        									</dfn>
+        								</div>
+        							</div>
+        							<button type="submit">
+        								Отправить запрос
+        							</button>
+        						</form>
+        					</div>
+        				</div>
+        			</ins>
+
+
+
+
 
 </div>
-					<div class="icon3">
 
-					 	<i>Fronted Coding</i>
-					</div>
+<footer class="footer">
 
+<div class="facebook">
 
-				</div>
+</div>
+</footer>
 
-						<button id="iwant" >
-							Начать работу
-						</button>
-							</div>
-					</div>
-				</div>
-	<div class="bot-border"></div>
-				<div class="main">
-						<div class="items">
-							<ul>
-								<li >
-									<a href="/detail.html">
-										<article class="item">
-
-											<div class="item-detail">
-
-												<div class="details">
-
-													<div class="date">
-														<p>
-															23 ноября 2015
-														</p>
-													</div>
-													<div class="title">
-														<h2>
-															Privat-Bank
-														</h2>
-													</div>
-													<div class="description">
-														<p>
-															Дизайн сайта банка
-														</p>
-													</div>
-
-												</div>
-
-											</div>
-
-											<img src="/public/img/item.png"/>
-										</article>
-									</a>
-								</li>
-								<li >
-									<a href="/detail.html">
-										<article class="item">
-
-											<div class="item-detail">
-
-												<div class="details">
-
-													<div class="date">
-														<p>
-															23 ноября 2015
-														</p>
-													</div>
-													<div class="title">
-														<h2>
-															Privat-Bank
-														</h2>
-													</div>
-													<div class="description">
-														<p>
-															Дизайн сайта банка
-														</p>
-													</div>
-
-												</div>
-
-											</div>
-
-											<img src="/public/img/item.png"/>
-										</article>
-									</a>
-								</li>
-								<li >
-									<a href="/detail.html">
-										<article class="item">
-
-											<div class="item-detail">
-
-												<div class="details">
-
-													<div class="date">
-														<p>
-															23 ноября 2015
-														</p>
-													</div>
-													<div class="title">
-														<h2>
-															Privat-Bank
-														</h2>
-													</div>
-													<div class="description">
-														<p>
-															Дизайн сайта банка
-														</p>
-													</div>
-
-												</div>
-
-											</div>
-
-											<img src="/public/img/item.png"/>
-										</article>
-									</a>
-								</li>
-								<li >
-									<a href="/detail.html">
-										<article class="item">
-
-											<div class="item-detail">
-
-												<div class="details">
-
-													<div class="date">
-														<p>
-															23 ноября 2015
-														</p>
-													</div>
-													<div class="title">
-														<h2>
-															Privat-Bank
-														</h2>
-													</div>
-													<div class="description">
-														<p>
-															Дизайн сайта банка
-														</p>
-													</div>
-
-												</div>
-
-											</div>
-
-											<img src="/public/img/item.png"/>
-										</article>
-									</a>
-								</li>
-								<li >
-									<a href="/detail.html">
-										<article class="item">
-
-											<div class="item-detail">
-
-												<div class="details">
-
-													<div class="date">
-														<p>
-															23 ноября 2015
-														</p>
-													</div>
-													<div class="title">
-														<h2>
-															Privat-Bank
-														</h2>
-													</div>
-													<div class="description">
-														<p>
-															Дизайн сайта банка
-														</p>
-													</div>
-
-												</div>
-
-											</div>
-
-											<img src="/public/img/item.png"/>
-										</article>
-									</a>
-								</li>
-								<li >
-									<a href="/detail.html">
-										<article class="item">
-
-											<div class="item-detail">
-
-												<div class="details">
-
-													<div class="date">
-														<p>
-															23 ноября 2015
-														</p>
-													</div>
-													<div class="title">
-														<h2>
-															Privat-Bank
-														</h2>
-													</div>
-													<div class="description">
-														<p>
-															Дизайн сайта банка
-														</p>
-													</div>
-
-												</div>
-
-											</div>
-
-											<img src="/public/img/item.png"/>
-										</article>
-									</a>
-								</li>
-								<li >
-									<a href="/detail.html">
-										<article class="item">
-
-											<div class="item-detail">
-
-												<div class="details">
-
-													<div class="date">
-														<p>
-															23 ноября 2015
-														</p>
-													</div>
-													<div class="title">
-														<h2>
-															Privat-Bank
-														</h2>
-													</div>
-													<div class="description">
-														<p>
-															Дизайн сайта банка
-														</p>
-													</div>
-
-												</div>
-
-											</div>
-
-											<img src="/public/img/item.png"/>
-										</article>
-									</a>
-								</li>
-								<li >
-									<a href="/detail.html">
-										<article class="item">
-
-											<div class="item-detail">
-
-												<div class="details">
-
-													<div class="date">
-														<p>
-															23 ноября 2015
-														</p>
-													</div>
-													<div class="title">
-														<h2>
-															Privat-Bank
-														</h2>
-													</div>
-													<div class="description">
-														<p>
-															Дизайн сайта банка
-														</p>
-													</div>
-
-												</div>
-
-											</div>
-
-											<img src="/public/img/item.png"/>
-										</article>
-									</a>
-								</li>
-								<li >
-									<a href="/detail.html">
-										<article class="item">
-
-											<div class="item-detail">
-
-												<div class="details">
-
-													<div class="date">
-														<p>
-															23 ноября 2015
-														</p>
-													</div>
-													<div class="title">
-														<h2>
-															Privat-Bank
-														</h2>
-													</div>
-													<div class="description">
-														<p>
-															Дизайн сайта банка
-														</p>
-													</div>
-
-												</div>
-
-											</div>
-
-											<img src="/public/img/item.png"/>
-										</article>
-									</a>
-								</li>
-								<li >
-									<a href="/detail.html">
-										<article class="item">
-
-											<div class="item-detail">
-
-												<div class="details">
-
-													<div class="date">
-														<p>
-															23 ноября 2015
-														</p>
-													</div>
-													<div class="title">
-														<h2>
-															Privat-Bank
-														</h2>
-													</div>
-													<div class="description">
-														<p>
-															Дизайн сайта банка
-														</p>
-													</div>
-
-												</div>
-
-											</div>
-
-											<img src="/public/img/item.png"/>
-										</article>
-									</a>
-								</li>
-								<li >
-									<a href="/detail.html">
-										<article class="item">
-
-											<div class="item-detail">
-
-												<div class="details">
-
-													<div class="date">
-														<p>
-															23 ноября 2015
-														</p>
-													</div>
-													<div class="title">
-														<h2>
-															Privat-Bank
-														</h2>
-													</div>
-													<div class="description">
-														<p>
-															Дизайн сайта банка
-														</p>
-													</div>
-
-												</div>
-
-											</div>
-
-											<img src="/public/img/item.png"/>
-										</article>
-									</a>
-								</li>
-								<li >
-									<a href="/detail.html">
-										<article class="item">
-
-											<div class="item-detail">
-
-												<div class="details">
-
-													<div class="date">
-														<p>
-															23 ноября 2015
-														</p>
-													</div>
-													<div class="title">
-														<h2>
-															Privat-Bank
-														</h2>
-													</div>
-													<div class="description">
-														<p>
-															Дизайн сайта банка
-														</p>
-													</div>
-
-												</div>
-
-											</div>
-
-											<img src="/public/img/item.png"/>
-										</article>
-									</a>
-								</li>
-								<li >
-									<a href="/detail.html">
-										<article class="item">
-
-											<div class="item-detail">
-
-												<div class="details">
-
-													<div class="date">
-														<p>
-															23 ноября 2015
-														</p>
-													</div>
-													<div class="title">
-														<h2>
-															Privat-Bank
-														</h2>
-													</div>
-													<div class="description">
-														<p>
-															Дизайн сайта банка
-														</p>
-													</div>
-
-												</div>
-
-											</div>
-
-											<img src="/public/img/item.png"/>
-										</article>
-									</a>
-								</li>
-								<li >
-									<a href="/detail.html">
-										<article class="item">
-
-											<div class="item-detail">
-
-												<div class="details">
-
-													<div class="date">
-														<p>
-															23 ноября 2015
-														</p>
-													</div>
-													<div class="title">
-														<h2>
-															Privat-Bank
-														</h2>
-													</div>
-													<div class="description">
-														<p>
-															Дизайн сайта банка
-														</p>
-													</div>
-
-												</div>
-
-											</div>
-
-											<img src="/public/img/item.png"/>
-										</article>
-									</a>
-								</li>
-
-								<li >
-									<a href="/detail.html">
-										<article class="item">
-
-											<div class="item-detail">
-
-												<div class="details">
-
-													<div class="date">
-														<p>
-															23 ноября 2015
-														</p>
-													</div>
-													<div class="title">
-														<h2>
-															Privat-Bank
-														</h2>
-													</div>
-													<div class="description">
-														<p>
-															Дизайн сайта банка
-														</p>
-													</div>
-
-												</div>
-
-											</div>
-
-											<img src="http://bb2.blackbox.ua/upload/works/3e/40/zakupki.png"/>
-										</article>
-									</a>
-								</li>
-							</ul>
-
-
-
-
-						</div>
-
-
-					</div>
-					<div id="toPopup">
-
-						<div	id="closePopup">
-							<div class="x">
-							<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="22px" height="22px" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"viewBox="0 0 22 22">
-
-									<g id="Layer_x0020_1">
-										<metadata id="CorelCorpID_0Corel-Layer"/>
-										<polygon  points="0,21.2903 10.2903,11 0,0.7097 0.7097,0 11,10.2903 21.2903,0 22,0.7097 11.7097,11 22,21.2903 21.2903,22 11,11.7097 0.7097,22 "/>
-									</g>
-								</svg>
-							</div>
-						</div>
-
-						<div id="popup_content">
-							<span id="status">
-								Мы получим Ваше сообщение и обязательно с Вами свяжемся
-							</span>
-							<form id="makeOrder" enctype='multipart/form-data' action="" >
-								<input  type="text" id="name" placeholder="Имя" />
-								<input  type="text" id="phone" placeholder="Номер телефона"/>
-								<input type="hidden"  />
-								<input type="email" id="email" placeholder="e-mail" />
-								<input type="hidden"  />
-								<input type="file" id="file" name="files[]" data-url="server/php/" multiple accept="image/jpg/doc/png/pdf"/>
-
-								<div class="file">
-									<div class="files">
-										<i class="tag-x" id="upload">
-											<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="15px" height="15px" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"viewBox="0 0 15 15">
-												<g id="Layer_x0020_1">
-													<metadata id="CorelCorpID_0Corel-Layer"/>
-													<polygon  points="8,0 8,7 15,7 15,8 8,8 8,15 7,15 7,8 0,8 0,7 7,7 7,0 "/>
-												</g>
-											</svg>
-											<span>
-												Прикрепить до 5ти файлов
-												<i class="size">
-													(до 2 Мб)
-												</i>
-											</span>
-										</i>
-										<dfn>
-										</dfn>
-									</div>
-								</div>
-								<button type="submit">
-									Отправить запрос
-								</button>
-							</form>
-						</div>
-					</div>
-			</ins>
-
-
-
-		</div>
-
-		<footer class="footer">
-				<div class="footer-content">
-
-					<div class="adress">
-						<span style="color:#a6ce39">email:</span>
-						info@blackbox.ua
-					</div>
-
-
-								<div class="email" >
-									+380 67 517 60 12
-					</div>
-					<div class="phone">
-						<span style="color:#01abe9">Skype:</span>
-						<a href="skype:masoyama3?call">blackbox.agency</a>
-					</div>
-
-
-
-				</div>
-			</footer>
-
-	</body>
+</body>
 
 </html>
